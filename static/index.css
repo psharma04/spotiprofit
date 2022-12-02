@@ -1,0 +1,124 @@
+/*
+
+    We should make this responsive.
+
+*/
+
+@font-face {
+    font-family: 'qdsans';
+    src: url('https://yourmum.sex/assets/comicsans.woff2') format('woff2'),
+         url('https://yourmum.sex/assets/comicsans.woff') format('woff'),
+         url('https://yourmum.sex/assets/comicsans.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: black;
+    font-family: 'Comic Sans MS', 'qdsans', sans-serif;
+    text-align: center;
+}
+
+* {
+    transition: cubic-bezier(.17,.67,.83,.67);
+}
+
+.top-stuff {
+    font-size: larger;
+}
+
+.container {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.app {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+}
+
+.query-input {
+    appearance: none;
+    border: 1px;
+    border-radius: 16px;
+    border-color: #aeaeae;
+    border-style: solid;
+    padding: 0.25rem 0.5rem;
+}
+
+.query-button {
+    appearance: none;
+    border: 1px;
+    border-radius: 16px;
+    border-color: #aeaeae;
+    background-color: #7C43FF;
+    color: #efefef;
+    border-style: solid;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+}
+
+.query-button:hover {
+    background-color: #9161ff;
+}
+
+.input-group {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-group form {
+
+    width: 100%;
+    justify-content: center;
+}
+
+.input-group .query-input:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-group .query-button:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.query-error {
+    color: red;
+    font-style: italic;
+}
+
+a {
+    color: lightblue;
+    text-decoration: none;
+}
+
+.share {
+    margin-top: 3%;
+}
+
+.twitter-share-button {
+    background-color: #1DA1F3;
+    color: #efefef;
+    text-decoration: none;
+    border-radius: 16px;
+    padding: 0.25rem 1rem;
+}
+
+.twitter-share-button:hover {
+    background-color: #3eadf1;
+}
+
+input[type='checkbox'] { display: none; } .wrap-collabsible { margin: 1.2rem 3%; margin-top: 3%; } .lbl-toggle { display: block; text-transform: uppercase; text-align: center; padding: 0.5rem; color: #DDD; background: #7C43FF; cursor: pointer; border-radius: 7px; transition: all 0.25s ease-out; } .lbl-toggle:hover { color: #FFF; } .lbl-toggle::before { content: ' '; display: inline-block; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 5px solid currentColor; vertical-align: middle; margin-right: .7rem; transform: translateY(-2px); transition: transform .2s ease-out; } .toggle:checked+.lbl-toggle::before { transform: rotate(90deg) translateX(-3px); } .collapsible-content { max-height: 0px; overflow: hidden; transition: max-height .25s ease-in-out; } .toggle:checked + .lbl-toggle + .collapsible-content { max-height: 250%; } .toggle:checked+.lbl-toggle { border-bottom-right-radius: 0; border-bottom-left-radius: 0; } .collapsible-content .content-inner { background: rgba(0, 105, 255, .2); border-bottom: 1px solid rgba(0, 105, 255, .45); border-bottom-left-radius: 7px; border-bottom-right-radius: 7px; padding: .1rem 3rem; } .collapsible-content p { margin-bottom: 0; }
+
