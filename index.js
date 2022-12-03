@@ -20,7 +20,6 @@ document.querySelector(".query-button").addEventListener('click', () => {
         else if (netCost == 0) {
             ResponseText = "Spotify broke even with your subscription last year!"
         }
-        console.log(ResponseText)
         document.querySelector(".response").textContent = ResponseText
     }
     catch(error) {
