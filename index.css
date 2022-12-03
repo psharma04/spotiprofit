@@ -5,13 +5,10 @@
 */
 
 @font-face {
-    font-family: 'qdsans';
-    src: url('https://yourmum.sex/assets/comicsans.woff2') format('woff2'),
-         url('https://yourmum.sex/assets/comicsans.woff') format('woff'),
-         url('https://yourmum.sex/assets/comicsans.ttf') format('ttf');
+    font-family: 'Circular-SP-Book';
+    src: url('https://encore.scdn.co/fonts/CircularSp-Book-4eaffdf96f4c6f984686e93d5d9cb325.woff2') format('woff2');
     font-weight: normal;
-    font-style: normal;
-    
+    font-style: normal;  
 }
 
 html, body {
@@ -21,7 +18,7 @@ html, body {
     height: 100%;
     color: white;
     background-color: black;
-    font-family: 'Comic Sans MS', 'qdsans', sans-serif;
+    font-family: 'Circular-SP-Book', sans-serif;
     text-align: center;
 }
 
