@@ -130,6 +130,29 @@ a {
     background-color: #3eadf1;
 }
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+    }
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #1DB954;
+    color: #fff;
+    width: 40%;
+    margin-left: -20%;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 10px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    }
+    
+    /* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    }
+
 
 input[type='checkbox'] { display: none; } .wrap-collabsible { margin: 1.2rem 3%; margin-top: 3%; } .lbl-toggle { display: block; text-transform: uppercase; text-align: center; padding: 0.5rem; color: #111111; background: #1DB954; cursor: pointer; border-radius: 7px; transition: all 0.25s ease-out; } .lbl-toggle:hover { color: #FFF; } .lbl-toggle::before { content: ' '; display: inline-block; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 5px solid currentColor; vertical-align: middle; margin-right: .7rem; transform: translateY(-2px); transition: transform .2s ease-out; } .toggle:checked+.lbl-toggle::before { transform: rotate(90deg) translateX(-3px); } .collapsible-content { max-height: 0px; overflow: hidden; transition: max-height .25s ease-in-out; } .toggle:checked + .lbl-toggle + .collapsible-content { max-height: 250%; } .toggle:checked+.lbl-toggle { border-bottom-right-radius: 0; border-bottom-left-radius: 0; } .collapsible-content .content-inner { background: rgba(0, 105, 255, .2); border-bottom: 1px solid rgba(0, 105, 255, .45); border-bottom-left-radius: 7px; border-bottom-right-radius: 7px; padding: .1rem 3rem; } .collapsible-content p { margin-bottom: 0; }
 

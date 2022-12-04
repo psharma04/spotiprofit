@@ -38,8 +38,8 @@
                 <hr>
                 <div class="input-group">
                     <form onsubmit="return false;">
-                        <label for="time-listening"><h3>How long did you spend listening to Spotify?</h3>
-                            <p>You can find this number from your <a href="https://spotify.com/wrapped/">Spotify Wrapped.</a></p></label>
+                        <label for="time-listening"><div class="tooltip"><h3>How long did you spend listening to Spotify?</h3>
+                            <span class="tooltiptext"><p>You can find this number from your <a href="https://spotify.com/wrapped/">Spotify Wrapped.</a></p></span></div></label><br>
                         <input style="font-family: 'Comic Sans MS', 'qdsans', sans-serif;" aria-label="Time Listening" class="query-input top-stuff" id="time-listening" name="time-listening" type="text" aria-placeholder="12345" placeholder="12345" value="12345"></input>
                         <br>
                         <label for="account-type"><h3>Which type of Spotify account do you use?</h3></label>
@@ -57,7 +57,6 @@
                 <div class="response top-stuff"></div>
                 </div>
                 <div class="share share-reddit"></div>
-                <div class="share share-instagram"></div>
                 <div class="share share-twitter"></div>
             <div class="wrap-collapsible" style="margin-top: 3%">
                 <input id="collapsible7" class="toggle" type="checkbox">
@@ -126,25 +125,6 @@
             </footer>
     </div>
     <script src="index.js"></script>
-    <script>
-        function instagramGenerate() {
-            var node = document.getElementById('targets');
-            const scale = 2;
-            domtoimage.toPng(node, {
-                height: 1280,
-                width: 720,
-                style: {
-                transform: "scale(" + scale + ")",
-                transformOrigin: "top left",
-                width: node.offsetWidth + "px",
-                height: node.offsetHeight + "px"
-                }
-            })
-            .then(function (blob) {
-                window.saveAs(blob, "my-node.png");
-            });
-        }
-    </script>
 </body>
 </html>
 
