@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdn.statically.io/gh/autinerd/simple-mastodon-share-button/main/mastodonShare.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer="" data-domain="spotiprofit.xyz" src="https://eric-andre.rbxii3.workers.dev/js/script.js"></script>
     <title>How much did Spotify make off you?</title>
     <script src="https://cdn.statically.io/gh/autinerd/simple-mastodon-share-button/main/mastodonShare.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="icon" type="image/png" href="icon.png">
     <meta name="description" content="Ever wanted to know how much money Spotify makes (or loses) from your subscription?">
     <meta property="og:url" content="https://spotiprofit.xyz">
@@ -30,6 +32,7 @@
     <div class="container">
         <div class="app">
             <div class="top-stuff">
+                <div id="targets">
                 <h1>How much profit did Spotify make off you?</h1>
                 <b>A questionable experiment by <a href=https://instagram.com/hyperbolicpurple">@hyperbolicpurple</a></b>
                 <hr>
@@ -52,7 +55,9 @@
                 <br>
                 <div class="query-error"></div>
                 <div class="response top-stuff"></div>
+                </div>
                 <div class="share share-reddit"></div>
+                <div class="share share-instagram"></div>
                 <div class="share share-twitter"></div>
             <div class="wrap-collapsible" style="margin-top: 3%">
                 <input id="collapsible7" class="toggle" type="checkbox">
@@ -121,6 +126,25 @@
             </footer>
     </div>
     <script src="index.js"></script>
+    <script>
+        function instagramGenerate() {
+            var node = document.getElementById('targets');
+            const scale = 2;
+            domtoimage.toPng(node, {
+                height: 1280,
+                width: 720,
+                style: {
+                transform: "scale(" + scale + ")",
+                transformOrigin: "top left",
+                width: node.offsetWidth + "px",
+                height: node.offsetHeight + "px"
+                }
+            })
+            .then(function (blob) {
+                window.saveAs(blob, "my-node.png");
+            });
+        }
+    </script>
 </body>
 </html>
 

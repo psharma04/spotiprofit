@@ -1,5 +1,5 @@
 // Calculated as 0.004 / (197/60)
-const costPerMinute = (0.004 / (197/60)) + (96000000000/(26637*3650000000))
+const costPerMinute = (0.004 / (197/60)) + (96000000000/(26637*3650000000));
 
 // Extract values from the form
 document.querySelector(".query-button").addEventListener('click', () => {
