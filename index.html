@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://cdn.statically.io/gh/autinerd/simple-mastodon-share-button/main/mastodonShare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer="" data-domain="spotiprofit.xyz" src="https://eric-andre.rbxii3.workers.dev/js/script.js"></script>
     <title>How much did Spotify make off you?</title>
+    <script src="https://cdn.statically.io/gh/autinerd/simple-mastodon-share-button/main/mastodonShare.js"></script>
     <link rel="icon" type="image/png" href="icon.png">
     <meta name="description" content="Ever wanted to know how much money Spotify makes (or loses) from your subscription?">
     <meta property="og:url" content="https://spotiprofit.xyz">
@@ -32,8 +34,6 @@
                 <b>A questionable experiment by <a href=https://instagram.com/hyperbolicpurple">@hyperbolicpurple</a></b>
                 <hr>
                 <div class="input-group">
-                    <!-- a11y :) -->
-                    
                     <form onsubmit="return false;">
                         <label for="time-listening"><h3>How long did you spend listening to Spotify?</h3>
                             <p>You can find this number from your <a href="https://spotify.com/wrapped/">Spotify Wrapped.</a></p></label>
@@ -46,13 +46,14 @@
                             <option value="7.995">Duo</option>
                             <option value="3.165">Family</option>
                         </select>
-                        <button type="submit" aria-label="Submit Joke Query" class="query-button top-stuff">&#8594;</button>
+                        <button type="submit" aria-label="Submit Query" class="query-button top-stuff">&#8594;</button>
                     </form>
                 </div>
+                <br>
                 <div class="query-error"></div>
-                <div class="response"></div>
-                <div class="share"></div>
-            </div>
+                <div class="response top-stuff"></div>
+                <div class="share share-reddit"></div>
+                <div class="share share-twitter"></div>
             <div class="wrap-collapsible" style="margin-top: 3%">
                 <input id="collapsible7" class="toggle" type="checkbox">
                 <label tabindex="0" for="collapsible7" class="lbl-toggle">Who are you?</label>
@@ -64,8 +65,7 @@
             </div>
             <div class="wrap-collapsible" style="margin-top: 3%">
                 <input id="collapsible" class="toggle" type="checkbox">
-                <label tabindex="0" for="collapsible" 
-class="lbl-toggle">What is this?</label>
+                <label tabindex="0" for="collapsible" class="lbl-toggle">What is this?</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
                         <p>This site uses publicly available information about Spotify's operating costs to figure out roughly how much money they made (or lost) as a result of your subscription. It was inspired by <a href="https://vt.tiktok.com/ZS8RWtHF2/">a TikTok by Campbell Walker</a>, but accounts for differences in pricing and saves you the effort of doing the math yourself.</p>
@@ -74,8 +74,7 @@ class="lbl-toggle">What is this?</label>
             </div>
             <div class="wrap-collapsible"  style="margin-top: 3%">
                 <input id="collapsible2" class="toggle" type="checkbox">
-                <label tabindex="0" for="collapsible2" 
-class="lbl-toggle">How does it work?</label>
+                <label tabindex="0" for="collapsible2" class="lbl-toggle">How does it work?</label>
                 <div class="collapsible-content">
                     <div class="content-inner">
                         <p>Okay it's math time.</p>
